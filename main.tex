@@ -3,7 +3,10 @@
 
 \usepackage[natbib, style = phys, biblabel = brackets, sorting = none]{biblatex}
 \addbibresource{reference.bib}
-\input{../preamble.dtx}
+\makeatletter
+\def\input@path{{../}}
+\makeatother
+\usepackage{preamble}
 
 \coverset{
   title   = Quantum Many-Body Theory,
