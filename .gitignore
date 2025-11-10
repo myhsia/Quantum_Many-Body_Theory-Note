@@ -10,6 +10,7 @@ preamble.dtx
 *.aux
 *.bbl
 *.bbl-SAVE-ERROR
+*.blg
 *.bcf
 *.fdb_latexmk
 *.fls
