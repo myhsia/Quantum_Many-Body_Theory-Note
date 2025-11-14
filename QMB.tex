@@ -1,0 +1,66 @@
+% Mingyu Xia (夏明宇, Westlake ID: 20251202247) Homework #i & #j
+\documentclass[11pt]{whatsnote}
+\RequirePackage[compat = 1.1.0]{tikz-feynhand}
+\setlength \feynhandblobsize {10mm}
+\usepackage[natbib, style = phys, biblabel = brackets, sorting = none]{biblatex}
+\addbibresource{reference.bib}
+
+\coverset{
+  title   = Quantum Many-Body Theory,
+  author  = \ttfamily \textsc{Mingyu Xia},
+  afill   = PhD @Westlake University,
+  date    = November 2025,
+  extinfo = {\includegraphics[width = .1\paperwidth]{logos/myhsia_seal}},
+  head    = string.pdf,
+  clogo   = cat.pdf,
+  llogos  = {mouse1.png, mouse2.png,
+             mouse4.png, mouse5.png}
+}
+
+\begin{document}
+
+\maketitle[violet]
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\include{chapter/1_.tex}
+\include{chapter/2_.tex}
+\include{chapter/3_.tex}
+\include{chapter/4_.tex}
+\include{chapter/5_.tex}
+\include{chapter/6_.tex}
+\include{chapter/7_.tex}
+\include{chapter/8_.tex}
+
+\printbibliography[title = {\refname\label{chap:bibliography}}]
+\newcommand \sectionname {Lecture \#}
+\appendix
+\sidefoot \thepage
+\fancyhead[OL, ER]{Mingyu Xia (Westlake ID: 20251202247)}
+\fancyhead[EL]{\sffamily \rightmark}
+\fancyhead[OR]{\fontfamily{lmr}\selectfont<<\texttt{\href{mailto:xiamingyu@westlake.edu.cn}{xiamingyu@westlake.edu.cn}}>>}
+\addcontentsline{toc}{chapter}{Problem Set}
+\renewcommand *\thesection{\sectionname \arabic{section}}
+\newweek
+\include{chapter/week1_[2025-09-02]}
+\newweek
+\include{chapter/week2_[2025-09-09]}
+\newweek
+\include{chapter/week3_[2025-09-16]}
+\newweek
+\include{chapter/week4_[2025-09-23]}
+\newweek
+\include{chapter/week5_[2025-10-09]}
+\newweek
+\include{chapter/week6_[2025-10-16]}
+\newweek
+\include{chapter/week7_[2025-10-22]}
+\newweek
+\include{chapter/week8_[2025-10-28]}
+\newweek
+\include{chapter/week9_[2025-11-04]}
+\newweek
+\include{chapter/weeka_[2025-11-11]}
+
+\end{document}

@@ -42,6 +42,7 @@ siunitx
 times
 underscore
 units
+#
 # For the `whatsnote` class
 amscls
 amsfonts
@@ -74,11 +75,9 @@ nicematrix
 paracol
 pgfplots
 physics2
-ragged2e
 refcount
 relsize
 simplekv
-siunitx
 soul
 titlesec
 tools
@@ -87,6 +86,7 @@ ulem
 xfrac
 xcolor
 zref
+#
 # For this repo
 whatsnote
 biblatex
