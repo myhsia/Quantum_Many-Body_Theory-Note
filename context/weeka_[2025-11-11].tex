@@ -10,7 +10,7 @@
   \]
   where
   \[
-    \mathcal H_0 = \sum_{k,\sigma} \epsilon_k c_{k\sigma}^\dagger c_{k\dagger},
+    \mathcal H_0 = \sum_{k,\sigma} \epsilon_k c_{k\sigma}^\dagger c_{k\sigma},
     \quad
     \mathcal H_\text{int} = \frac1{2V} \sum_{k,k',q,\sigma,\sigma'} V_{q}
       c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
@@ -111,3 +111,44 @@
     from canonical transformation.
   \end{enumext}
 \end{problem}
+\begin{solution}\leavevmode
+  \begin{enumext}
+    \item Starting from the identity of $\mathcal S$,
+    \[
+      [\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}
+    \]
+    To get the matrix elements of $\mathcal S$, substitute the commutator above
+    into the states $\bra<m|$ and $\ket|n>$ ($m \neq n$)
+    \[
+     -\braket<m|\mathcal H_\text{off}|n>
+    = \braket<m|[\mathcal S, \mathcal H_0]|n>
+    = \braket<m|\mathcal S|n> E_n - E_m \braket<m|\mathcal S|n>
+    = (E_n - E_m) \braket<m|\mathcal S|n>
+    \]
+    where $\bra<m|\mathcal H_0 = \bra<m| E_m$
+    and $\mathcal H_0\ket|n> = E_n\ket|n>$. Then,
+    \[
+      \braket<m|\mathcal S|n>
+    = \frac{\braket<m|\mathcal H_\text{off}|n>}{E_m - E_n}
+    \qq{for} m \neq n
+    \]
+    where we set the diagonal elements $\braket<n|\mathcal S|n> = 0$.
+    By inserting $\ketbra|m><n|$ to form the identity $\identity$,
+    the operator $\mathcal S$ in Dirac notation can be expressed as
+    \[
+      \mathcal S = \sum_m \sum_n \ket|m>
+                   \frac{\braket<m|\mathcal H_\text{off}|n>}{E_m - E_n} \bra<n|
+    \]
+    So, we can generate $\mathcal S$ from the four operators in
+    $\mathcal H_\text{off}$, which is equivalent to the four operators in
+    $\mathcal H_\text{int}$ but without the diagonal elements, that is
+    \[
+      \mathcal S = \sum_{k, k', q, \sigma, \sigma'} S_{kk'q}^{\sigma\sigma'}
+        c_{k+q, \sigma}^\dagger c_{k'-q, \sigma'}^\dagger
+        c_{k'\sigma'} c_{k\sigma}
+    \]
+    Then, substitute it into the coondition
+    $[\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}$ to
+    determine $S_{kk'q}^{\sigma\sigma'}$.
+  \end{enumext}
+\end{solution}
