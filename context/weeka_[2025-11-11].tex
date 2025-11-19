@@ -3,10 +3,10 @@
 \section{Homework \#10 [2025-11-11]}
 
 \begin{problem}
-  Interpreting Fermi liquid via a Schrieffer-Wolff transformation.
+  Interpreting the Fermi liquid via a Schrieffer-Wolff transformation.
   We start from a translationally invariant, spin-1/2 fermion system
   \[
-    \mathcal H = \mathcal H + \mathcal H_\text{int}
+    \mathcal H = \mathcal H + \mathcal H_\text{int},
   \]
   where
   \[
@@ -16,17 +16,17 @@
       c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
       c_{k'\sigma'} c_{k\sigma}.
   \]
-  The Fermi sea $\ket|\text{FS}>$ is the ground state of $\mathcal H_0$,
+  The Fermi sea $\ket|\textsf{FS}>$ is the ground state of $\mathcal H_0$,
   with all states $|k| < k_F$ filled. We assume $V_q$ is weak and smooth
   near $q = 0$.
 
-  To do canonical transformation for a Fermi liquid state, we want to integrate
-  out (cancel out) \textbf{off-shell} excitations. This is different from
-  previous cases, where the original interacting terms are canceled out
-  entirely. Instead, for a Fermi liquid state, We write $H_\text{int}$
+  To do a canonical transformation for a Fermi liquid state, we want to
+  integrate out (cancel out) \textbf{off-shell} excitations. This is different
+  from previous cases, where the original interacting terms are canceled out
+  entirely. Instead, for a Fermi liquid state, we write $H_\text{int}$
   schematically as
   \[
-    \mathcal H_\text{int} = \mathcal H_\text{diag} + H_\text{off}
+    \mathcal H_\text{int} = \mathcal H_\text{diag} + H_\text{off},
   \]
   where
   \begin{itemize}
@@ -45,7 +45,7 @@
   and $\mathcal H_\text{off}$ is the rest.
   \paragraph{Such separation can be formally done via the semi-classical
     variational method}
-  A simplified version is write
+  A simplified version is written
   \[
     \mathcal H_\text{diag} = \frac1{2V}
       \sum_{\substack{k,k',q\\
@@ -66,7 +66,7 @@
   Then the transformed Hamiltonian becomes
   \[
     \mathcal H' = \mathcal H_0 + \mathcal H_\text{diag}
-      + \frac12[\mathcal S, \mathcal H_\text{off}] + \mathcal O(V^3)
+      + \frac12[\mathcal S, \mathcal H_\text{off}] + \mathcal O(V^3),
   \]
   where the new effective Hamiltonian is block-diagonal up to order $V^2$.
 
@@ -76,7 +76,7 @@
   \[
     [\mathcal S, \mathcal H_0]
   = \sum_{\alpha\beta} S_{\alpha\beta} (\epsilon_\alpha - \epsilon_\beta)
-    c_\alpha^\dagger c_\beta
+    c_\alpha^\dagger c_\beta,
   \]
   so to satisfy $[\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}$,
   we can write
@@ -87,8 +87,8 @@
   \]
   This is the Schrieffer-Wolff generator, which mixes states differing in
   unperturbed energy. For the present problem, $\mathcal S$ connects a bare
-  fermion state $c_{k\alpha}^\dagger \ket|\text{FS}>$ to configurations with one
-  additional particle-hole pair.
+  fermion state $c_{k\alpha}^\dagger \ket|\textsf{FS}>$ to configurations with
+  one additional particle-hole pair.
   \paragraph{Now, answer the following questions.}
   \begin{enumext}
     \item Evaluate $[\mathcal S, c_{k\sigma}^\dagger]$;
@@ -103,19 +103,20 @@
     to the first order in $V$
     \[
       \tilde c_{k\sigma}^\dagger \approx c_{k\sigma}^\dagger
-    + [\mathcal S, c_{k\sigma}^\dagger] 
+    + [\mathcal S, c_{k\sigma}^\dagger].
     \]
-    \item Compute $\tilde c_{k\sigma}^\dagger \ket|\text{FS}>$.
+    \item Compute $\tilde c_{k\sigma}^\dagger \ket|\textsf{FS}>$.
     \item Compute quasiparticle weight
-    $Z_k \equiv |\braket<\text{FS}|\tilde c_k\tilde c_k^\dagger|\text{FS}>|^2$
-    from canonical transformation.
+    $Z_k \equiv
+    |\braket<\textsf{FS}|\tilde c_k\tilde c_k^\dagger|\textsf{FS}>|^2$
+    from the canonical transformation.
   \end{enumext}
 \end{problem}
 \begin{solution}\leavevmode
   \begin{enumext}
     \item Starting from the identity of $\mathcal S$,
     \[
-      [\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}
+      [\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}.
     \]
     To get the matrix elements of $\mathcal S$, substitute the commutator above
     into the states $\bra<m|$ and $\ket|n>$ ($m \neq n$)
@@ -123,14 +124,14 @@
      -\braket<m|\mathcal H_\text{off}|n>
     = \braket<m|[\mathcal S, \mathcal H_0]|n>
     = \braket<m|\mathcal S|n> E_n - E_m \braket<m|\mathcal S|n>
-    = (E_n - E_m) \braket<m|\mathcal S|n>
+    = (E_n - E_m) \braket<m|\mathcal S|n>,
     \]
     where $\bra<m|\mathcal H_0 = \bra<m| E_m$
     and $\mathcal H_0\ket|n> = E_n\ket|n>$. Then,
     \[
       \braket<m|\mathcal S|n>
     = \frac{\braket<m|\mathcal H_\text{off}|n>}{E_m - E_n}
-    \qq{for} m \neq n
+    \qq{for} m \neq n,
     \]
     where we set the diagonal elements $\braket<n|\mathcal S|n> = 0$.
     By inserting $\ketbra|m><n|$ to form the identity $\identity$,
@@ -145,10 +146,225 @@
     \[
       \mathcal S = \sum_{k, k', q, \sigma, \sigma'} S_{kk'q}^{\sigma\sigma'}
         c_{k+q, \sigma}^\dagger c_{k'-q, \sigma'}^\dagger
-        c_{k'\sigma'} c_{k\sigma}
+        c_{k'\sigma'} c_{k\sigma},
     \]
-    Then, substitute it into the coondition
+    Then, substitute it into the condition
     $[\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}$ to
     determine $S_{kk'q}^{\sigma\sigma'}$.
+    To distinguish the indices, we need to write $\mathcal H_0$ as
+    \[
+      \mathcal H_0 = \sum_{p, \tau} \epsilon_p c_{p\tau}^\dagger c_{p\tau}
+    \]
+    Then, the commutator is
+    \[
+      [\mathcal S, \mathcal H_0]
+    = \sum_{k,k',q,\sigma,\sigma'} S_{kk'q}^{\sigma\sigma'}
+      \sum_{p,\tau} \epsilon_p [c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+       c_{k'\sigma'} c_{k\sigma}, c_{p\tau}^\dagger c_{p\tau}].
+    \]
+    Compute the kernel first
+    \begin{multline*}
+      [c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+       c_{k'\sigma'} c_{k\sigma}, c_{p\tau}^\dagger c_{p\tau}]
+    = [c_{k+q,\sigma}^\dagger, c_{p\tau}^\dagger c_{p\tau}]
+      c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} c_{k\sigma}
+    + c_{k+q,\sigma}^\dagger
+      [c_{k'-q,\sigma'}^\dagger, c_{p\tau}^\dagger c_{p\tau}]
+      c_{k'\sigma'} c_{k\sigma}\\
+    + c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      [c_{k'\sigma'}, c_{p\tau}^\dagger c_{p\tau}] c_{k\sigma}
+    + c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      c_{k'\sigma'} [c_{k\sigma}, c_{p\tau}^\dagger c_{p\tau}].
+    \end{multline*}
+    The four terms
+    \begin{enumext}[columns = 2]
+      \item $[c_{k+q,\sigma}^\dagger, c_{p\tau}^\dagger c_{p\tau}]
+    = -c_{p\tau}^\dagger \delta_{p,k+q} \delta_{\tau,\sigma}$
+      \item $[c_{k'-q,\sigma'}^\dagger, c_{p\tau}^\dagger c_{p\tau}]
+    = -c_{p\tau}^\dagger \delta_{p,k'-q} \delta_{\tau, \sigma'}$
+      \item $[c_{k'\sigma'}, c_{p\tau}^\dagger c_{p\tau}]
+    = c_{p\tau} \delta_{k'p} \delta_{\sigma'\tau}$
+      \item $[c_{k\sigma}, c_{p\tau}^\dagger c_{p\tau}]
+    = c_{p\tau} \delta_{kp} \delta_{\sigma\tau}$
+    \end{enumext}
+    where we used the anti-commutative properties of the Fermions
+    \[
+      \{c_{i,j}, c_{i',j'}^\dagger\} = \delta_{i,i'} \delta_{j,j'}, \quad
+      \{c_{i,j}, c_{i',j'}\} = \{c_{i,j}, c_{i',j'}\} = 0.
+    \]
+    Substitute them into the second sum of the commutator
+    \begin{align*}
+      \sum_{p,\tau} \epsilon_p [c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+       c_{k'\sigma'} c_{k\sigma}, c_{p\tau}^\dagger c_{p\tau}]
+= & - \mathemph{\sum_{p,\tau} \epsilon_p
+      c_{p\tau}^\dagger \delta_{p,k+q} \delta_{\tau,\sigma}}
+      c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} c_{k\sigma}\\
+  & - \mathemph{\sum_{p,\tau} \epsilon_p} c_{k+q,\sigma}^\dagger
+      \mathemph[\sum_p]
+        {c_{p\tau}^\dagger \delta_{p,k'-q} \delta_{\tau, \sigma'}}
+      c_{k'\sigma'} c_{k\sigma}\\
+  & + \mathemph{\sum_{p,\tau} \epsilon_p}
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      \mathemph[\sum_p]
+        {c_{p\tau} \delta_{k'p} \delta_{\sigma'\tau}} c_{k\sigma}\\
+  & + \mathemph{\sum_{p,\tau} \epsilon_p}
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      c_{k'\sigma'} \mathemph[\sum_p]{c_{p\tau}
+        \delta_{kp} \delta_{\sigma\tau}}.
+    \end{align*}
+    Due to the sifting property of the $\delta$-function, the second sum of the
+    commutator becomes (here take the minus sign out
+    since $[\mathcal S, \mathcal H_0] = -\mathcal H_\text{off}$)
+    \[
+      \sum_{p,\tau} \epsilon_p [c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+       c_{k'\sigma'} c_{k\sigma}, c_{p\tau}^\dagger c_{p\tau}]
+    = -(\epsilon_{k+q} + \epsilon_{k'-q} - \epsilon_{k'} - \epsilon_k)
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} c_{k\sigma}.
+    \]
+    Hence, the commutator $[\mathcal S, \mathcal H_0]$ becomes
+    \[
+      -\mathcal H_\text{off} = [\mathcal S, \mathcal H_0]
+    = -\sum_{k,k',q,\sigma,\sigma'} S_{kk'q}^{\sigma\sigma'}
+      (\epsilon_{k+q} + \epsilon_{k'-q} - \epsilon_{k'} - \epsilon_k)
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} c_{k\sigma}
+    \]
+    To compare with the expression of $\mathcal H_\text{off}$
+    \[
+      \mathcal H_\text{off} = \frac1{2V}
+        \sum_{k,k',q,\sigma,\sigma'}
+        V_{q}
+        c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+        c_{k'\sigma'} c_{k\sigma} \qq{where} k\neq k',\ \sigma\neq\sigma'.
+    \]
+    Then, we arrive at
+    \begin{multline*}
+      \sum_{k,k',q,\sigma,\sigma'} S_{kk'q}^{\sigma\sigma'}
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} c_{k\sigma}
+    = \mathcal S\\
+    = \frac1{2V}
+      \sum_{k,k',q,\sigma,\sigma'} \frac{V_{q}}
+        {\epsilon_{k+q} + \epsilon_{k'-q} - \epsilon_k - \epsilon_{k'}}
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      c_{k'\sigma'} c_{k\sigma}.
+    \end{multline*}
+    This is the second-quantized form of $\mathcal S$.
+    Now, calculate the commutator $[\mathcal S, c_{k\sigma}^\dagger]$.
+    Calculate the kernel
+    \[
+      [c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+       c_{k'\sigma'} c_{k\sigma}, c_{k\sigma}^\dagger]
+    \]
+    first. To distinguish the indices, we take
+    $c_{k\sigma}^\dagger \to c_{p\tau}^\dagger$
+    \begin{align*}
+      [c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+       c_{k'\sigma'} c_{k\sigma}, c_{p\tau}^\dagger] &
+    = c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger(
+      c_{k'\sigma'} \{c_{k\sigma}, c_{p\tau}^\dagger\}
+    - \{c_{k'\sigma'}, c_{p\tau}^\dagger\}c_{k\sigma})\\
+  & = c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      c_{k'\sigma'} \delta_{kp} \delta_{\sigma\tau}
+    - c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      \delta_{k'p} \delta_{\sigma'\tau} c_{k\sigma},
+    \end{align*}
+    where $c_{p\tau}^\dagger$ only ``knock'' on $c_{k'\sigma'}$ and
+    $c_{k\sigma}$ effectively due to the anti-commutative properties of
+    the Fermions. We define the function
+    \[
+      \Phi(p_1,p_2,q) = \frac1
+        {\epsilon_{p_1+q} + \epsilon_{p_2-q} - \epsilon_{p_1} - \epsilon_{p_2}}.
+    \]
+    Then, the commutator becomes
+    \begin{align*}
+      [\mathcal S, c_{p\tau}^\dagger] &
+    = \sum_{k,k',q,\sigma,\sigma'} \frac{V_q\Phi(k,k',q)}{2V} (
+      c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      c_{k'\sigma'} \delta_{kp} \delta_{\sigma\tau}
+    - c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger
+      \delta_{k'p} \delta_{\sigma'\tau} c_{k'\sigma'})\\
+  & = \sum_{k',q,\sigma'} \frac{V_q\Phi(p,k',q)}{2V}
+      c_{p+q,\tau}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} -
+      \sum_{k,q,\sigma} \frac{V_q\Phi(k,p,q)}{2V}
+      c_{k+q,\sigma}^\dagger c_{p-q,\tau}^\dagger c_{k,\sigma}.
+    \end{align*}
+    Swap dummy variables in the second sum: $k \to k'$, $\sigma \to \sigma'$,
+    $q \to -q$, and use
+    $c_{p+q}^\dagger c_{k'-q}^\dagger = -c_{k'-q}^\dagger c_{p+q}^\dagger$
+    \[
+      [\mathcal S, c_{p\tau}^\dagger]
+    = \sum_{k',q,\sigma'} \frac{V_q\Phi(p,k',q)}{2V}
+      c_{p+q,\tau}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'} +
+      \sum_{k,q,\sigma} \frac{V_{-q}\Phi(k',p,-q)}{2V}
+      c_{p+q,\tau}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'},
+    \]
+    where $\Phi(p,k',q) = \Phi(k',p,-q)$. Hence,
+    \[
+      [\mathcal S, c_{p\tau}^\dagger]
+    = \sum_{k',q,\sigma'} \frac{V_q + V_{-q}}{2V}
+      \frac{c_{p+q,\tau}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'}}
+        {\epsilon_{p+q} + \epsilon_{k'-q} - \epsilon_{p} - \epsilon_{k'}}, ~
+      [\mathcal S, c_{k\sigma}^\dagger]
+    = \sum_{k',q,\sigma'} \frac{V_q + V_{-q}}{2V}
+      \frac{c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'}}
+        {\epsilon_{k+q} + \epsilon_{k'-q} - \epsilon_{k} - \epsilon_{k'}}.
+    \]
+    \item Substitute the result from (a) directly
+    \[
+      \tilde c_{k\sigma}^\dagger \approx c_{k\sigma}^\dagger
+    + \sum_{k',q,\sigma'} \frac{V_q + V_{-q}}{2V}
+      \frac{c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'}}
+        {\epsilon_{k+q} + \epsilon_{k'-q} - \epsilon_{k} - \epsilon_{k'}}.
+    \]
+    \item Substitute the result from (b) directly
+    \[
+      \tilde c_{k\sigma}^\dagger \ket|\textsf{FS}>
+    = c_{k\sigma}^\dagger \ket|\textsf{FS}>
+    + \sum_{k',q,\sigma'} \frac{V_q + V_{-q}}{2V}
+      \frac{c_{k+q,\sigma}^\dagger c_{k'-q,\sigma'}^\dagger c_{k'\sigma'}}
+        {\epsilon_{k+q} + \epsilon_{k'-q} - \epsilon_{k} - \epsilon_{k'}}.
+      \ket|\textsf{FS}>
+    \]
+    \item Evaluate the overlap
+    $\bra<\textsf{FS}|c_{k}\tilde c_{k}^\dagger\ket|\textsf{FS}>$ term by term
+    \begin{enumext}
+      \item The zeroth order $\mathcal O(V^0)$
+      \[
+        \braket<\textsf{FS}|c_kc_k^\dagger|\textsf{FS}> = 1.
+      \]
+      Here assume $|k| > k_F$, so $c_{k} c_{k}^\dagger = 1$ in the Fermi sea.
+      \item Denote the operator
+      \[
+        \chi_k \equiv [\mathcal S, c_k^\dagger].
+      \]
+      The first order $\mathcal O(V^1)$
+      \[
+        \bra<\textsf{FS}|c_{k} \chi_k \ket|\textsf{FS}>
+      = \braket<\textsf{FS}|c_{k} [\mathcal S, c_{k}^\dagger]|\textsf{FS}> = 0,
+      \]
+      where $\chi_k$ creates a \emph{two-particle, one-hole state} relative to
+      the Fermi sea. Applying $c_k$ still leaves a net excitation, and the
+      matrix element vanishes since the states are orthogonal
+      ($\mathcal{S}$ is off-diagonal).
+      \item The second order $\mathcal O(V^2)$
+      \[
+        \frac12 \braket<\textsf{FS}|c_{k} [\mathcal S, \chi_k]|\textsf{FS}>
+      = \frac12 \braket<\textsf{FS}|
+          c_{k} [\mathcal S, [\mathcal S, c_{k}^\dagger]]|\textsf{FS}>
+      = -\frac12 \bra<\textsf{FS}| \chi_k^\dagger \chi_k \ket|\textsf{FS}>
+      = -\frac12 |\chi_k \ket|\textsf{FS}>|^2.
+      \]
+      Since the generator $\mathcal{S}$ is anti-Hermitian
+      ($\mathcal{S}^\dagger = -\mathcal{S}$), the second-order projection
+      simplifies to $-\frac12 \braket<\chi_k^\dagger \chi_k>_{\text{FS}}$.
+      Substituting the explicit form of $\chi_k$ into the weight, we obtain
+      \[
+        Z_k = 1 - \frac1{4V^2} \sum_{k',q,\sigma'}
+          \frac{|V_q + V_{-q}|
+          \theta(k_F - |k'|) \theta(|k + q| - k_F) \theta(|k' - q| - k_F)}
+            {(\epsilon_{k+q} + \epsilon_{k'-q}
+            - \epsilon_{k} - \epsilon_{k'})^2} < 1,
+      \]
+      which brings a quasiparticle weight less than $1$.
+    \end{enumext}
   \end{enumext}
 \end{solution}
